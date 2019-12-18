@@ -11,11 +11,8 @@ module.exports = (sequelize, DataTypes) => {
   }, {});
   UserGuild.associate = function (models) {
     // associations can be defined here
-    models.UserGuild.belongsTo(models.annonces, {
-      foreignKey: {
-        allowNull: false
-      }
-    })
+    models.UserGuild.hasMany(models.annonces);
+
   };
   return UserGuild;
 };
