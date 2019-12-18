@@ -30,23 +30,23 @@ module.exports = {
       },
       g2w: {
         type: Sequelize.BOOLEAN,
-        allowNull: false
+        allowNull: true
       },
       albion: {
         type: Sequelize.BOOLEAN,
-        allowNull: false
+        allowNull: true
       },
       lol: {
         type: Sequelize.BOOLEAN,
-        allowNull: false
+        allowNull: true
       },
       overwatch: {
         type: Sequelize.BOOLEAN,
-        allowNull: false
+        allowNull: true
       },
       tm2: {
         type: Sequelize.BOOLEAN,
-        allowNull: false
+        allowNull: true
       },
       createdAt: {
         allowNull: false,
