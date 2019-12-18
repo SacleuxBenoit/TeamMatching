@@ -13,10 +13,10 @@ module.exports = (sequelize, DataTypes) => {
   Annonces.associate = function (models) {
     // associations can be defined here
     models.Annonces.belongsTo(models.userguild, {
-      foreignKey: {
-        allowNull: false
-      }
-    })
+      foreignKey: "userguildId",
+      allowNull: false
+    }
+    )
   };
   return Annonces;
 };
