@@ -8,14 +8,6 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      idUserguilds: {
-        allowNull: false,
-        type: Sequelize.INTEGER,
-        references: {
-          model: Userguilds,
-          key: 'id'
-        }
-      },
       title: {
         type: Sequelize.STRING,
         allowNull: false
@@ -55,6 +47,15 @@ module.exports = {
       updatedAt: {
         allowNull: false,
         type: Sequelize.DATE
+      },
+      userguildId: {
+        allowNull: false,
+        type: Sequelize.INTEGER,
+        references: {
+          model: 'UserGuilds',
+          key: 'id',
+          as: 'userguildId'
+        }
       }
     });
   },
