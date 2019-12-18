@@ -10,8 +10,13 @@ module.exports = (sequelize, DataTypes) => {
     overwatch: DataTypes.BOOLEAN,
     tm2: DataTypes.BOOLEAN
   }, {});
-  Annonces.associate = function(models) {
+  Annonces.associate = function (models) {
     // associations can be defined here
+    models.Annonces.belongsTo(models.userguild, {
+      foreignKey: {
+        allowNull: false
+      }
+    })
   };
   return Annonces;
 };
