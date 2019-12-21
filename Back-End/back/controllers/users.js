@@ -15,7 +15,7 @@ module.exports = {
         const discordgu = req.body.discordgu;
         const description = req.body.description;
 
-        if (pseudo == null || email == null || mdp == null || discordpv == null || discordgu == null) {
+        if (pseudo == null || email == null || mdp == null || discordpv == null || discordgu == null || guilde == null) {
             return res.status(400).json({ 'error': 'missing parameters' });
         }
 
