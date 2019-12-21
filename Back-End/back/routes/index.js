@@ -10,4 +10,6 @@ exports.router = (function () {
 
     router.route('/users/register').post(usersController.register);
     router.route('/users/login/').post(usersController.login);
-})
+
+    return router;
+})();
