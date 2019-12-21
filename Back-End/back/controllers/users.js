@@ -1,6 +1,6 @@
 // Imports
 const bcrypt = require('bcrypt');
-const jwt = require('jsonwebtoken');
+const jwtUtils = require('../utils/jwt.utils');
 const models = require('../models');
 
 
@@ -63,7 +63,7 @@ module.exports = {
         }
 
         models.user.findOne({
-            where: { email: email }
+            where: { pseudo: pseudo }
         })
 
             .then(function (userFound) {
@@ -71,8 +71,8 @@ module.exports = {
                     bcrypt.compare(mdp, userFound.mdp, function (errBycrypt, resBycrypt) {
                         if (resBycrypt) {
                             return res.status(200).json({
-                                'userId': newUser.id,
-                                'token': 'THE TOKEN'
+                                'userId': userFound.id,
+                                'token': jwtUtils.generateTokenForUser(userFound)
                             });
                         }
                         else {
