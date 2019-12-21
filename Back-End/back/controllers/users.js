@@ -52,9 +52,10 @@ module.exports = {
                 return res.status(500).json({ 'error': 'unable to verify user' });
             });
     },
-},
+
 
     login(req, res) {
 
-}
+    }
 
+}
