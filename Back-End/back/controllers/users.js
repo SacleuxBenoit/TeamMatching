@@ -82,7 +82,7 @@ module.exports = {
                     );
                 } else {
                     return res.status(404).json({
-                        'error': 'user not exist in DB}'
+                        'error': 'user not exist in DB'
                     }
                     );
                 }
