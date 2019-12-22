@@ -4,8 +4,8 @@ module.exports = (sequelize, DataTypes) => {
     title: DataTypes.STRING,
     content: DataTypes.STRING,
     pj: DataTypes.STRING,
-    g2w: DataTypes.BOOLEAN,
-    albio: DataTypes.BOOLEAN,
+    gw2: DataTypes.BOOLEAN,
+    albion: DataTypes.BOOLEAN,
     lol: DataTypes.BOOLEAN,
     overwatch: DataTypes.BOOLEAN,
     tm2: DataTypes.BOOLEAN
