@@ -20,7 +20,7 @@ module.exports = {
         allowNull: true,
         type: Sequelize.STRING
       },
-      g2w: {
+      gw2: {
         allowNull: true,
         type: Sequelize.BOOLEAN
       },
