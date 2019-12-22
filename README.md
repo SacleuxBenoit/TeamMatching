@@ -28,6 +28,7 @@ Et pour finir comment nous nous sommes organiser (en résumé) sur la conception
 
     - La distribution des trois rôles (Product Owner, Chef de Projet, Tech Lead)
     - La conception du cahier des charges, de notre UML Use Case ainsi que notre UML de Classe
+    - Le choix des Technos
     - Le diagramme de notre base de données
     - La conception de l'api, et de la base de données
     - La conception du Front, ainsi que sa liaison avec notre Back
@@ -35,4 +36,14 @@ Et pour finir comment nous nous sommes organiser (en résumé) sur la conception
 Nous détaillerons chaque tâche dans le README de chaque parties correspondantes.
 
 ### Les Technos
- 
+
+- [Git](https://git-scm.com) - Pour le versionning.
+- [NodeJS](https://nodejs.org/en/) -  Node.js JavaScript runtime.
+- [Express](https://expressjs.com) - Fast, unopinionated, minimalist web framework for node.
+- [Sequelize](https://sequelize.org) - An easy-to-use multi SQL dialect ORM for Node.js.
+- [Postgresql](https://www.postgresql.org) - Open source object-relational database system.
+- [Bcrypt](https://www.bcrypt.fr) - Encoding Password.
+- [JsonWebToken](https://github.com/auth0/node-jsonwebtoken) - Permet de donner une signature numérique.
+- [Mocha](https://mochajs.org) - Javascript test framework for node.js & the browser.
+- [VueJs](https://vuejs.org) - Framework évolutif pour construire des interfaces utilisateur
+- [Vuetify](https://vuetifyjs.com/en/) - Material Component Framework for Vue.
