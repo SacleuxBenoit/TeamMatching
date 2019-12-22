@@ -15,8 +15,9 @@ module.exports = {
         const overwatch = req.body.overwatch;
         const tm2 = req.body.tm2;
 
-
-
+        if (title == null || content == null) {
+            return res.status(400).json({ 'error': 'missing parameters' });
+        }
 
     }
 }
