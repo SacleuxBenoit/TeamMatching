@@ -91,35 +91,46 @@ module.exports = {
             return res.status(400).json({ 'error': 'missing parameters' });
         }
 
-        models.User.findOne({
-            where: { pseudo: pseudo }
-        })
-
-            .then(function (userFound) {
+        asyncLib.waterfall([
+            function (done) {
+                models.User.findOne({
+                    where: { pseudo: pseudo }
+                })
+                    .then(function (userFound) {
+                        done(null, userFound);
+                    })
+                    .catch(function (err) {
+                        return res.status(500).json({ 'error': 'unable to verify user' });
+                    });
+            },
+            function (userFound, done) {
                 if (userFound) {
                     bcrypt.compare(mdp, userFound.mdp, function (errBycrypt, resBycrypt) {
-                        if (resBycrypt) {
-                            return res.status(200).json({
-                                'userId': userFound.id,
-                                'token': jwtUtils.generateTokenForUser(userFound)
-                            });
-                        }
-                        else {
-                            return res.status(403).json({ "error": "invalid password" });
-                        }
-                    }
-                    );
+                        done(null, userFound, resBycrypt);
+                    });
                 } else {
-                    return res.status(404).json({
-                        'error': 'user not exist in DB'
-                    }
-                    );
+                    return res.status(404).json({ 'error': 'user not exist in DB' });
+                }
+            },
+            function (userFound, resBycrypt, done) {
+                if (resBycrypt) {
+                    done(userFound);
+                } else {
+                    return res.status(403).json({ 'error': 'invalid password' });
                 }
             }
-            )
-            .catch(function (err) {
-                return res.status(500).json({ 'error': 'unable to verify user' });
-            })
+        ], function (userFound) {
+            if (userFound) {
+                return res.status(201).json({
+                    'userId': userFound.id,
+                    'token': jwtUtils.generateTokenForUser(userFound)
+                });
+            } else {
+                return res.status(500).json({ 'error': 'cannot log on user' });
+            }
+        });
+    },
 
-    }
+
+
 }
