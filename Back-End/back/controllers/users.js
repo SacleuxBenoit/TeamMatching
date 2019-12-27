@@ -1,7 +1,11 @@
 // Imports
 const bcrypt = require('bcrypt');
 const jwtUtils = require('../utils/jwt.utils');
+const asyncLib = require('async');
 const models = require('../models');
+
+
+//Constants
 const EMAIL_REGEX = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 const PASSWORD_REGEX = /^[a-zA-Z]\w{3,14}$/;
 
@@ -29,42 +33,55 @@ module.exports = {
             return res.status(400).json({ 'error': 'password is not valid' });
         }
 
-
-        models.User.findOne({
-            attributes: ['email'],
-            where: { email: email }
-        })
-            .then(function (userFound) {
+        asyncLib.waterfall([
+            function (done) {
+                models.User.findOne({
+                    attributes: ['email'],
+                    where: { email: email }
+                })
+                    .then(function (userFound) {
+                        done(null, userFound);
+                    })
+                    .catch(function (err) {
+                        return res.status(500).json({ 'error': 'unable to verify user' });
+                    });
+            },
+            function (userFound, done) {
                 if (!userFound) {
                     bcrypt.hash(mdp, 5, function (err, bcryptedmdp) {
-                        const newUser = models.User.create({
-                            email: email,
-                            pseudo: pseudo,
-                            mdp: bcryptedmdp,
-                            discordpv: discordpv,
-                            discordgu: discordgu,
-                            description: description,
-                            guilde: 0,
-
-                        })
-                            .then(function (newUser) {
-                                return res.status(201).json({
-                                    'userId': newUser.id
-                                })
-                            })
-                            .catch(function (err) {
-                                return res.status(500).json({ 'error': 'cannot add user' });
-                            });
+                        done(null, userFound, bcryptedmdp);
                     });
                 } else {
                     return res.status(409).json({ 'error': 'user already exist' });
                 }
-            })
-            .catch(function (err) {
-                return res.status(500).json({ 'error': 'unable to verify user' });
-            });
+            },
+            function (userFound, bcryptedmdp, done) {
+                var newUser = models.User.create({
+                    email: email,
+                    pseudo: pseudo,
+                    mdp: bcryptedmdp,
+                    guilde: guilde,
+                    discordpv: discordpv,
+                    discordgu: discordgu,
+                    description: description
+                })
+                    .then(function (newUser) {
+                        done(newUser);
+                    })
+                    .catch(function (err) {
+                        return res.status(500).json({ 'error': 'cannot add user' });
+                    });
+            }
+        ], function (newUser) {
+            if (newUser) {
+                return res.status(201).json({
+                    'userId': newUser.id
+                });
+            } else {
+                return res.status(500).json({ 'error': 'cannot add user' });
+            }
+        });
     },
-
 
     login(req, res) {
         const pseudo = req.body.pseudo;
