@@ -2,7 +2,8 @@
 const bcrypt = require('bcrypt');
 const jwtUtils = require('../utils/jwt.utils');
 const models = require('../models');
-
+const EMAIL_REGEX = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+const PASSWORD_REGEX = /^[a-zA-Z]\w{3,14}$/;
 
 module.exports = {
 
@@ -18,22 +19,33 @@ module.exports = {
         if (pseudo == null || email == null || mdp == null || discordpv == null || discordgu == null || guilde == null) {
             return res.status(400).json({ 'error': 'missing parameters' });
         }
+        if (pseudo.length >= 13 || pseudo.length <= 4) {
+            return res.status(400).json({ 'error': 'wrong username (must be length 5 - 12)' });
+        }
+        if (!EMAIL_REGEX.test(email)) {
+            return res.status(400).json({ 'error': 'email is not valid' });
+        }
+        if (!PASSWORD_REGEX.test(mdp)) {
+            return res.status(400).json({ 'error': 'password is not valid' });
+        }
 
-        models.user.findOne({
+
+        models.User.findOne({
             attributes: ['email'],
             where: { email: email }
         })
             .then(function (userFound) {
                 if (!userFound) {
-                    bcrypt.hash(password, 5, function (err, bcryptedPassword) {
-                        const newUser = models.user.create({
+                    bcrypt.hash(mdp, 5, function (err, bcryptedmdp) {
+                        const newUser = models.User.create({
                             email: email,
                             pseudo: pseudo,
-                            mdp: bcryptedPassword,
+                            mdp: bcryptedmdp,
                             discordpv: discordpv,
                             discordgu: discordgu,
                             description: description,
                             guilde: 0,
+
                         })
                             .then(function (newUser) {
                                 return res.status(201).json({
@@ -62,7 +74,7 @@ module.exports = {
             return res.status(400).json({ 'error': 'missing parameters' });
         }
 
-        models.user.findOne({
+        models.User.findOne({
             where: { pseudo: pseudo }
         })
 

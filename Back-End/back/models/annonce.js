@@ -1,6 +1,6 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
-  const annonce = sequelize.define('annonce', {
+  const Annonce = sequelize.define('Annonce', {
     title: DataTypes.STRING,
     content: DataTypes.STRING,
     pj: DataTypes.STRING,
@@ -10,13 +10,13 @@ module.exports = (sequelize, DataTypes) => {
     overwatch: DataTypes.BOOLEAN,
     tm2: DataTypes.BOOLEAN
   }, {});
-  annonce.associate = function (models) {
+  Annonce.associate = function (models) {
     // associations can be defined here
-    models.annonce.belongsTo(models.user, {
+    models.Annonce.belongsTo(models.User, {
       foreignKey: {
         allowNull: false
       }
     })
   };
-  return annonce;
+  return Annonce;
 };
