@@ -130,7 +130,26 @@ module.exports = {
             }
         });
     },
+    getUserProfile: function (req, res) {
+        // Getting auth header
+        const headerAuth = req.headers['authorization'];
+        const userId = jwtUtils.getUserId(headerAuth);
 
-
+        if (userId < 0) {
+            return res.status(400).json({ 'error': 'wrong token' });
+        }
+        models.User.findOne({
+            attributes: ['id', 'email', 'pseudo', 'guilde', 'discordpv', 'discorgu', 'description'],
+            where: { id: userId }
+        }).then(function (user) {
+            if (user) {
+                res.status(201).json(user);
+            } else {
+                res.status(404).json({ 'error': 'user not found' });
+            }
+        }).catch(function (err) {
+            res.status(500).json({ 'error': 'cannot fetch user' });
+        });
+    },
 
 }

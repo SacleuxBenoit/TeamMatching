@@ -40,7 +40,7 @@ module.exports = {
         allowNull: true,
         type: Sequelize.BOOLEAN
       },
-      idUSERS: {
+      userId: {
         allowNull: false,
         type: Sequelize.INTEGER,
         references: {
