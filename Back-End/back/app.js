@@ -22,3 +22,5 @@ router.use('/api/', apiRouter);
 router.listen(8080, function () {
     console.log('Server is listening !');
 })
+
+module.exports = router;
