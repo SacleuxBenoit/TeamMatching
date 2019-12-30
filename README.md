@@ -69,5 +69,7 @@ in order to develop a such project it was essential to define a [specifications]
 
 - choose the technos that can be used
 
+### the client's needs
+
 
 
