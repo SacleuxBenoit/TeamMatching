@@ -2,7 +2,7 @@
 const bcrypt = require('bcrypt');
 const jwtUtils = require('../utils/jwt.utils');
 const asyncLib = require('async');
-const models = require('../models');
+const models = require('../models/');
 
 
 //Constants
@@ -135,6 +135,9 @@ module.exports = {
         const headerAuth = req.headers['authorization'];
         const userId = jwtUtils.getUserId(headerAuth);
 
+        if (userId < 0)
+            return res.status(400).json({ 'error': 'wrong token' });
+
         models.User.findOne({
             attributes: ['id', 'email', 'pseudo', 'guilde', 'discordpv', 'discorgu', 'description'],
             where: { id: userId }
@@ -190,4 +193,5 @@ module.exports = {
         });
     }
 }
+
 
