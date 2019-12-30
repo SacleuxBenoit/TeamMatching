@@ -54,3 +54,10 @@ Nous détaillerons chaque tâche dans le README de chaque partie correspondante.
 
 First of all, what is __TeamMatching__? it's very simple, __TeamMatching__ is an end of training project (which will not be carried at term) which aims to *learn how to work as a team* as well as *develop, with greater autonomy our technical skills*.
 
+## The main idea of the project
+
+At the very beginning of this adventure you should know that it was a question of developing a system that can connect player and guilds for a single game on a *web plateform* then a *mobile application* .
+However, this idea having been implemented in game itself, so we decided to included several games in our project and not to develop the mobile application.
+
+
+
