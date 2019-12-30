@@ -94,5 +94,19 @@ And finally how we organize ourselves (in summary) on the design of this platefo
 
 We will detail each task in the README of each corresponding part.
 
+## The technos
+
+- [Git](https://git-scm.com) - for versioning.
+- [NodeJS](https://nodejs.org/en/) -  Node.js JavaScript runtime.
+- [Express](https://expressjs.com) - Fast, unopinionated, minimalist web framework for node.
+- [Sequelize](https://sequelize.org) - An easy-to-use multi SQL dialect ORM for Node.js.
+- [Postgresql](https://www.postgresql.org) - Open source object-relational database system.
+- [Bcrypt](https://www.bcrypt.fr) - Encoding Password.
+- [JsonWebToken](https://github.com/auth0/node-jsonwebtoken) - Allows you to give a digital signature.
+- [Mocha](https://mochajs.org) - Javascript test framework for node.js & the browser.
+- [VueJs](https://vuejs.org) - Scalable framework for building user interfaces.
+- [Vuetify](https://vuetifyjs.com/en/) - Material Component Framework for Vue.
+
+
 
 
