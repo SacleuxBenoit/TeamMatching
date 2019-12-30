@@ -136,7 +136,7 @@ module.exports = {
         const userId = jwtUtils.getUserId(headerAuth);
 
         models.User.findOne({
-            attributes: ['id', 'email', 'pseudo', 'guilde', 'discordpv', 'discorgu', 'description'],
+            attributes: ['id', 'pseudo', 'email', 'guilde', 'discordpv', 'discordgu', 'description'],
             where: { id: userId }
         }).then(function (user) {
             if (user) {
