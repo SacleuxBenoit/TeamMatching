@@ -59,7 +59,7 @@ First of all, what is __TeamMatching__? it's very simple, __TeamMatching__ is an
 At the very beginning of this adventure you should know that it was a question of developing a system that can connect player and guilds for a single game on a *web plateform* then a *mobile application* .
 However, this idea having been implemented in game itself, so we decided to included several games in our project and not to develop the mobile application.
 
-## the establishment
+## The establishment
 
 in order to develop a such project it was essential to define a [specifications](https://github.com/SacleuxBenoit/TeamMatching/blob/master/Informations/CahierDesCharges/CahierDesCharges.md) allowing us to do :
 
@@ -67,7 +67,7 @@ in order to develop a such project it was essential to define a [specifications]
     - Organize the worload between the members of the team
     - choose the technos that can be used
 
-### the client's needs
+### The client's needs
 
 ## Organization of the teamwork
 
@@ -78,12 +78,12 @@ Here are the 2 team members :
 
 And finally how we organize ourselves (in summary) on the design of this plateform :
 
-    - The distribution of the three roles (Product Owner, Project Manager, Tech Lead)
-    - The design of the specifications of our UML use case and our Class UML
-    - The choice of the technos 
-    - The diagram of our database
-    - The design of our API, and the database 
-    - The design of the front, as well as its connection with our back 
+    - The distribution of the three roles (Product Owner, Project Manager, Tech Lead).
+    - The design of the specifications of our UML use case and our Class UML.
+    - The choice of the technos.
+    - The diagram of our database.
+    - The design of our API, and the database.
+    - The design of the front, as well as its connection with our back.
 
 We will detail each task in the README of each corresponding part.
 

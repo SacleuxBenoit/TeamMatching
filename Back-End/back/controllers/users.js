@@ -139,7 +139,7 @@ module.exports = {
             return res.status(400).json({ 'error': 'wrong token' });
 
         models.User.findOne({
-            attributes: ['id', 'email', 'pseudo', 'guilde', 'discordpv', 'discorgu', 'description'],
+            attributes: ['id', 'pseudo', 'email', 'guilde', 'discordpv', 'discordgu', 'description'],
             where: { id: userId }
         }).then(function (user) {
             if (user) {
