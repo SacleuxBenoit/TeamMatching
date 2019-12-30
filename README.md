@@ -59,5 +59,15 @@ First of all, what is __TeamMatching__? it's very simple, __TeamMatching__ is an
 At the very beginning of this adventure you should know that it was a question of developing a system that can connect player and guilds for a single game on a *web plateform* then a *mobile application* .
 However, this idea having been implemented in game itself, so we decided to included several games in our project and not to develop the mobile application.
 
+## the establishment
+
+in order to develop a such project it was essential to define a [specifications](https://github.com/SacleuxBenoit/TeamMatching/blob/master/Informations/CahierDesCharges/CahierDesCharges.md) allowing us to do :
+
+- Know the needs to satisfy the client 
+
+- Organize the worload between the members of the team
+
+- choose the technos that can be used
+
 
 
