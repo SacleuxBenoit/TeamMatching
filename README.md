@@ -63,11 +63,9 @@ However, this idea having been implemented in game itself, so we decided to incl
 
 in order to develop a such project it was essential to define a [specifications](https://github.com/SacleuxBenoit/TeamMatching/blob/master/Informations/CahierDesCharges/CahierDesCharges.md) allowing us to do :
 
-- Know the needs to satisfy the client 
-
-- Organize the worload between the members of the team
-
-- choose the technos that can be used
+    - Know the needs to satisfy the client 
+    - Organize the worload between the members of the team
+    - choose the technos that can be used
 
 ### the client's needs
 
@@ -80,17 +78,12 @@ Here are the 2 team members :
 
 And finally how we organize ourselves (in summary) on the design of this plateform :
 
-- The distribution of the three roles (Product Owner, Project Manager, Tech Lead)
-
-- The design of the specifications of our UML use case and our Class UML
-
-- The choice of the technos 
-
-- The diagram of our database
-
-- The design of our API, and the database 
-
-- The design of the front, as well as its connection with our back 
+    - The distribution of the three roles (Product Owner, Project Manager, Tech Lead)
+    - The design of the specifications of our UML use case and our Class UML
+    - The choice of the technos 
+    - The diagram of our database
+    - The design of our API, and the database 
+    - The design of the front, as well as its connection with our back 
 
 We will detail each task in the README of each corresponding part.
 
