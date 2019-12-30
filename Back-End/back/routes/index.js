@@ -11,6 +11,8 @@ exports.router = (function () {
     router.route('/users/register').post(usersController.register);
     router.route('/users/login/').post(usersController.login);
     router.route('/users/me/').get(usersController.getUserProfile);
+    router.route('/users/me/').put(usersController.updateUserProfile);
+
 
     return router;
 })();
