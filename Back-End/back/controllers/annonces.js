@@ -1,23 +1,63 @@
 // Imports
 const bcrypt = require('bcrypt');
 const jwtUtils = require('../utils/jwt.utils');
+const asyncLib = require('async');
 const models = require('../models');
 
-module.exports = {
+//Constants
+const TITLE_LIMIT = 2;
+const CONTENT_LIMIT = 4;
 
-    game(req, res) {
+module.exports = {
+    createAnnonce: function (req, res) {
+        // Getting auth header
+        const headerAuth = req.headers['authorization'];
+        const userId = jwtUtils.getUserId(headerAuth);
+
+        // Params
         const title = req.body.title;
         const content = req.body.content;
-        const pj = req.body.pj;
-        const gw2 = req.body.gw2;
-        const albion = req.body.albion
-        const lol = req.body.lol;
-        const overwatch = req.body.overwatch;
-        const tm2 = req.body.tm2;
 
         if (title == null || content == null) {
             return res.status(400).json({ 'error': 'missing parameters' });
         }
 
+        if (title.length <= TITLE_LIMIT || content.length <= CONTENT_LIMIT) {
+            return res.status(400).json({ 'error': 'invalid parameters' });
+        }
+
+        asyncLib.waterfall([
+            function (done) {
+                models.User.findOne({
+                    where: { id: userId }
+                })
+                    .then(function (userFound) {
+                        done(null, userFound);
+                    })
+                    .catch(function (err) {
+                        return res.status(500).json({ 'error': 'unable to verify user' });
+                    });
+            },
+            function (userFound, done) {
+                if (userFound) {
+                    models.Annonce.create({
+                        title: title,
+                        content: content,
+                        userId: userFound.id
+                    })
+                        .then(function (newAnnonce) {
+                            done(newAnnonce);
+                        });
+                } else {
+                    res.status(404).json({ 'error': 'user not found' });
+                }
+            },
+        ], function (newAnnonce) {
+            if (newAnnonce) {
+                return res.status(201).json(newAnnonce);
+            } else {
+                return res.status(500).json({ 'error': 'cannot post message' });
+            }
+        });
     }
 }
