@@ -19,6 +19,7 @@ module.exports = {
     },
     getUserId: function (authorization) {
 
+        let userId = -1;
         const token = module.exports.parseAuthorization(authorization);
         if (token != null) {
             try {
