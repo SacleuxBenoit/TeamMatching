@@ -1,7 +1,7 @@
 'use strict';
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.createTable('annonces', {
+    return queryInterface.createTable('Annonces', {
       id: {
         allowNull: false,
         autoIncrement: true,
@@ -20,7 +20,7 @@ module.exports = {
         allowNull: true,
         type: Sequelize.STRING
       },
-      g2w: {
+      gw2: {
         allowNull: true,
         type: Sequelize.BOOLEAN
       },
@@ -40,11 +40,11 @@ module.exports = {
         allowNull: true,
         type: Sequelize.BOOLEAN
       },
-      idUSERS: {
+      userId: {
         allowNull: false,
         type: Sequelize.INTEGER,
         references: {
-          model: 'users',
+          model: 'Users',
           key: 'id'
         }
       },
@@ -59,6 +59,6 @@ module.exports = {
     });
   },
   down: (queryInterface, Sequelize) => {
-    return queryInterface.dropTable('annonces');
+    return queryInterface.dropTable('Annonces');
   }
 };
