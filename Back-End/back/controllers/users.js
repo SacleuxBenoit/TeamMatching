@@ -135,9 +135,6 @@ module.exports = {
         const headerAuth = req.headers['authorization'];
         const userId = jwtUtils.getUserId(headerAuth);
 
-        if (userId < 0) {
-            return res.status(400).json({ 'error': 'wrong token' });
-        }
         models.User.findOne({
             attributes: ['id', 'email', 'pseudo', 'guilde', 'discordpv', 'discorgu', 'description'],
             where: { id: userId }
@@ -152,4 +149,45 @@ module.exports = {
         });
     },
 
+    updateUserProfile: function (req, res) {
+
+        const headerAuth = req.headers['authorization'];
+        const userId = jwtUtils.getUserId(headerAuth);
+
+        const description = req.body.description;
+
+        asyncLib.waterfall([
+            function (done) {
+                models.User.findOne({
+                    attributes: ['id', 'description'],
+                    where: { id: userId }
+                }).then(function (userFound) {
+                    done(null, userFound);
+                })
+                    .catch(function (err) {
+                        return res.status(500).json({ 'error': 'unable to verify user' });
+                    });
+            },
+            function (userFound, done) {
+                if (userFound) {
+                    userFound.update({
+                        description: (description ? description : userFound.description)
+                    }).then(function () {
+                        done(userFound);
+                    }).catch(function (err) {
+                        res.status(500).json({ 'error': 'cannot update user' });
+                    });
+                } else {
+                    res.status(404).json({ 'error': 'user not found' });
+                }
+            },
+        ], function (userFound) {
+            if (userFound) {
+                return res.status(201).json(userFound);
+            } else {
+                return res.status(500).json({ 'error': 'cannot update user profile' });
+            }
+        });
+    }
 }
+

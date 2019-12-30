@@ -1,7 +1,7 @@
 // Imports
 
 const jwt = require('jsonwebtoken');
-const JWT_SIGN_SECRET = 'AkLc0LAuUcKeHIPkLAjFFpvzZVwiInuD8oXLimO72vSGnJpPBX1lzHzgBpo7Bn2';
+const JWT_SIGN_SECRET = '<JWT_SIGN_TOKEN>';
 // Exported functions
 
 module.exports = {
@@ -18,11 +18,11 @@ module.exports = {
         return (authorization != null) ? authorization.replace('Bearer ', '') : null;
     },
     getUserId: function (authorization) {
-        const userId = -1;
+
         const token = module.exports.parseAuthorization(authorization);
         if (token != null) {
             try {
-                var jwtToken = jwt.verify(token, JWT_SIGN_SECRET);
+                let jwtToken = jwt.verify(token, JWT_SIGN_SECRET);
                 if (jwtToken != null)
                     userId = jwtToken.userId;
             } catch (err) { }
