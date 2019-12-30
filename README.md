@@ -47,3 +47,10 @@ Nous détaillerons chaque tâche dans le README de chaque partie correspondante.
 - [Mocha](https://mochajs.org) - Javascript test framework for node.js & the browser.
 - [VueJs](https://vuejs.org) - Framework évolutif pour construire des interfaces utilisateur
 - [Vuetify](https://vuetifyjs.com/en/) - Material Component Framework for Vue.
+
+# English part :
+
+# Teammatching
+
+First of all, what is __TeamMatching__? it's very simple, __TeamMatching__ is an end of training project (which will not be carried at term) which aims to *learn how to work as a team* as well as *develop, with greater autonomy our technical skills*.
+
