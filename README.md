@@ -71,5 +71,28 @@ in order to develop a such project it was essential to define a [specifications]
 
 ### the client's needs
 
+## Organization of the teamwork
+
+Here are the 2 team members : 
+
+- [Sacleux Benoit](https://github.com/SacleuxBenoit) -> *Product Owner* and *Project Manager*
+- [Spysschaert Steven](https://github.com/Steven-Spysschaert) -> *Tech Lead* and *Project Manager*
+
+And finally how we organize ourselves (in summary) on the design of this plateform :
+
+- The distribution of the three roles (Product Owner, Project Manager, Tech Lead)
+
+- The design of the specifications of our UML use case and our Class UML
+
+- The choice of the technos 
+
+- The diagram of our database
+
+- The design of our API, and the database 
+
+- The design of the front, as well as its connection with our back 
+
+We will detail each task in the README of each corresponding part.
+
 
 
