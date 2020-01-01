@@ -59,5 +59,11 @@ module.exports = {
                 return res.status(500).json({ 'error': 'cannot post message' });
             }
         });
+    },
+    listAnnonces: function(req, res){
+        const fields = req.query.fields;
+        const limit = parseInt(req.query.limit);
+        const offset = parseInt(req.query.offset);
+        const order = req.query.order;
     }
 }
