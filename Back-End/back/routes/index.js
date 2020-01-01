@@ -18,7 +18,7 @@ exports.router = (function () {
 
     //Annonces routes
     router.route('/annonces/new/').post(annonceController.createAnnonce);
-    router.route('/annonces/').get(annonces.listAnnonces);
+    router.route('/annonces/').get(annonceController.listAnnonces);
 
     return router;
 })();
