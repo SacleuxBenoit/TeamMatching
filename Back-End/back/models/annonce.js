@@ -1,22 +1,22 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
-  const annonce = sequelize.define('annonce', {
+  const Annonce = sequelize.define('Annonce', {
     title: DataTypes.STRING,
     content: DataTypes.STRING,
     pj: DataTypes.STRING,
-    g2w: DataTypes.BOOLEAN,
-    albio: DataTypes.BOOLEAN,
+    gw2: DataTypes.BOOLEAN,
+    albion: DataTypes.BOOLEAN,
     lol: DataTypes.BOOLEAN,
     overwatch: DataTypes.BOOLEAN,
     tm2: DataTypes.BOOLEAN
   }, {});
-  annonce.associate = function (models) {
+  Annonce.associate = function (models) {
     // associations can be defined here
-    models.annonce.belongsTo(models.user, {
-      foreignKey: {
-        allowNull: false
-      }
-    })
+    models.Annonce.belongsTo(models.User, {
+      foreignKey: "userId",
+      onDelete: "CASCADE"
+    }
+    )
   };
-  return annonce;
+  return Annonce;
 };
