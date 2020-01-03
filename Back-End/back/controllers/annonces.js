@@ -77,11 +77,11 @@ module.exports = {
             offset: (!isNaN(offset)) ? offset : null,
             include: [{
               model: models.User,
-              attributes: [ 'pseudo' ]
+              attributes: ['pseudo']
             }]
-          }).then(function(Annonces) {
-            if (Annonces) {
-              res.status(200).json(Annonces);
+          }).then(function(annonces) {
+            if (annonces) {
+              res.status(200).json(annonces);
             } else {
               res.status(404).json({ "error": "no Messages found" });
             }
