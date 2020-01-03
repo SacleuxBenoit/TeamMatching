@@ -8,6 +8,15 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
+      userId: {
+        allowNull: false,
+        autoIncrement: true,
+        type: Sequelize.INTEGER,
+        references: {
+          model: 'Users',
+          key: 'id'
+        }
+      },
       title: {
         allowNull: false,
         type: Sequelize.STRING
@@ -39,14 +48,6 @@ module.exports = {
       tm2: {
         allowNull: true,
         type: Sequelize.BOOLEAN
-      },
-      userId: {
-        allowNull: false,
-        type: Sequelize.INTEGER,
-        references: {
-          model: 'Users',
-          key: 'id'
-        }
       },
       createdAt: {
         allowNull: false,
