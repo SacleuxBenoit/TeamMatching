@@ -14,7 +14,8 @@ module.exports = (sequelize, DataTypes) => {
     // associations can be defined here
     models.Annonce.belongsTo(models.User, {
       foreignKey: {
-        allowNull: false
+        allowNull: false,
+        autoIncrement: true
       }
     })
   };
