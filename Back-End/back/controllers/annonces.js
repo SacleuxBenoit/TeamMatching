@@ -52,7 +52,7 @@ module.exports = {
                 } else {
                     res.status(404).json({ 'error': 'user not found' });
                 }
-            },
+            },g
         ], function (newAnnonce) {
             if (newAnnonce) {
                 return res.status(201).json(newAnnonce);
@@ -61,7 +61,7 @@ module.exports = {
             }
         });
     },
-    listAnnonces: function(req, res){
+    listAnnonces: function (req, res) {
         const fields = req.query.fields;
         const limit = parseInt(req.query.limit);
         const offset = parseInt(req.query.offset);
@@ -69,8 +69,8 @@ module.exports = {
 
         if (limit > ITEMS_LIMIT) {
             limit = ITEMS_LIMIT;
-          }
-          models.Annonce.findAll({
+        }
+        models.Annonce.findAll({
             order: [(order != null) ? order.split(':') : ['title', 'ASC']],
             attributes: (fields !== '*' && fields != null) ? fields.split(',') : null,
             limit: (!isNaN(limit)) ? limit : null,
@@ -83,11 +83,11 @@ module.exports = {
             if (annonces) {
               res.status(200).json(annonces);
             } else {
-              res.status(404).json({ "error": "no Messages found" });
+                res.status(404).json({ "error": "no Messages found" });
             }
-          }).catch(function(err) {
+        }).catch(function (err) {
             console.log(err);
             res.status(500).json({ "error": "invalid fields" });
-          });
+        });
     }
 }
