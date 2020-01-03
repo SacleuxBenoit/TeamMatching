@@ -10,11 +10,12 @@ module.exports = {
       },
       userId: {
         allowNull: false,
-        autoIncrement: true,
         type: Sequelize.INTEGER,
+        onDelete: "CASCADE",
         references: {
           model: 'Users',
-          key: 'id'
+          key: 'id',
+          as: "userId"
         }
       },
       title: {
