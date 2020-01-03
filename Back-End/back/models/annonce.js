@@ -13,11 +13,10 @@ module.exports = (sequelize, DataTypes) => {
   Annonce.associate = function (models) {
     // associations can be defined here
     models.Annonce.belongsTo(models.User, {
-      foreignKey: {
-        allowNull: false,
-        autoIncrement: true
-      }
-    })
+      foreignKey: "userId",
+      onDelete: "CASCADE"
+    }
+    )
   };
   return Annonce;
 };
