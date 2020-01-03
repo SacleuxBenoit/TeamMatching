@@ -61,7 +61,7 @@ module.exports = {
             }
         });
     },
-    listAnnonces: function(req, res){
+    listAnnonces: function (req, res) {
         const fields = req.query.fields;
         const limit = parseInt(req.query.limit);
         const offset = parseInt(req.query.offset);
@@ -69,25 +69,25 @@ module.exports = {
 
         if (limit > ITEMS_LIMIT) {
             limit = ITEMS_LIMIT;
-          }
-          models.Annonce.findAll({
+        }
+        models.Annonce.findAll({
             order: [(order != null) ? order.split(':') : ['title', 'ASC']],
             attributes: (fields !== '*' && fields != null) ? fields.split(',') : null,
             limit: (!isNaN(limit)) ? limit : null,
             offset: (!isNaN(offset)) ? offset : null,
             include: [{
-              model: models.User,
-              attributes: [ 'pseudo' ]
+                model: models.User,
+                attributes: ['pseudo']
             }]
-          }).then(function(Annonces) {
+        }).then(function (Annonces) {
             if (Annonces) {
-              res.status(200).json(Annonces);
+                res.status(200).json(Annonces);
             } else {
-              res.status(404).json({ "error": "no Messages found" });
+                res.status(404).json({ "error": "no Messages found" });
             }
-          }).catch(function(err) {
+        }).catch(function (err) {
             console.log(err);
             res.status(500).json({ "error": "invalid fields" });
-          });
+        });
     }
 }
