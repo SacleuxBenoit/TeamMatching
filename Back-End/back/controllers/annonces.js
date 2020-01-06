@@ -52,7 +52,7 @@ module.exports = {
                 } else {
                     res.status(404).json({ 'error': 'user not found' });
                 }
-            },
+            },g
         ], function (newAnnonce) {
             if (newAnnonce) {
                 return res.status(201).json(newAnnonce);
@@ -119,12 +119,12 @@ module.exports = {
             limit: (!isNaN(limit)) ? limit : null,
             offset: (!isNaN(offset)) ? offset : null,
             include: [{
-                model: models.User,
-                attributes: ['pseudo']
+              model: models.User,
+              attributes: ['pseudo']
             }]
-        }).then(function (Annonces) {
-            if (Annonces) {
-                res.status(200).json(Annonces);
+          }).then(function(annonces) {
+            if (annonces) {
+              res.status(200).json(annonces);
             } else {
                 res.status(404).json({ "error": "no Messages found" });
             }
