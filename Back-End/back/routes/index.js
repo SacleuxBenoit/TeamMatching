@@ -15,7 +15,6 @@ exports.router = (function () {
     router.route('/users/login/').post(usersController.login);
     router.route('/users/me/').get(usersController.getUserProfile);
     router.route('/users/me/').put(usersController.updateUserProfile);
-    router.route('/users/me/').delete(usersController.deleteUserProfile);
 
     //Annonces routes
     router.route('/annonces/new/').post(annonceController.createAnnonce);
