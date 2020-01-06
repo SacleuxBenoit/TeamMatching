@@ -61,6 +61,49 @@ module.exports = {
             }
         });
     },
+    updateAnnonce: function (req, res) {
+
+        const headerAuth = req.headers['authorization'];
+        const userId = jwtUtils.getUserId(headerAuth);
+
+        const content = req.body.content;
+        const id = req.body.id;
+
+        asyncLib.waterfall([
+            function (done) {
+                models.Annonce.findOne({
+                    attributes: ['id', 'content'],
+                    where: { id: userId },
+                    where: { id: id }
+                }).then(function (annonceFound) {
+                    done(null, annonceFound);
+                })
+                    .catch(function (err) {
+                        return res.status(500).json({ 'error': 'unable to check annonce' });
+                    });
+            },
+            function (annonceFound, done) {
+                if (annonceFound) {
+                    annonceFound.update({
+                        content: (content ? content : annonceFound.content)
+                    }).then(function () {
+                        done(annonceFound);
+                    }).catch(function (err) {
+                        res.status(500).json({ 'error': 'cannot update annonce' });
+                    });
+                } else {
+                    res.status(404).json({ 'error': 'annonce not found' });
+                }
+            },
+        ], function (annonceFound) {
+            if (annonceFound) {
+                return res.status(201).json(annonceFound);
+            } else {
+                return res.status(500).json({ 'error': 'cannot update Annonce' });
+            }
+        });
+    },
+
     listAnnonces: function (req, res) {
         const fields = req.query.fields;
         const limit = parseInt(req.query.limit);
