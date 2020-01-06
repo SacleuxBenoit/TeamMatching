@@ -1,5 +1,4 @@
 config/config.json
-node_modules/bcrypt/lib/binding/bcrypt_lib.node
-node_modules/bcrypt/package.json
+node_modules
 package-lock.json
 package.json
