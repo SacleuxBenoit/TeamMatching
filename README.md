@@ -15,7 +15,7 @@ Afin de développer un tel projet, il était indispensable de définir un [cahie
     
     - De connaître les besoins à satisfaire du client
     - D'organiser la charge de travail entre les membres de l'équipe
-    - De choisir les technos pouvant être utilisées
+    - De choisir les technos pouvant être utilisées.
     
 ### Les besoins du client
 
