@@ -1,5 +1,7 @@
 # TeamMatching
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/6e87d3b1bf7545c18d92bc33e4cda6f0)](https://www.codacy.com/manual/benoitsacleux/TeamMatching?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=SacleuxBenoit/TeamMatching&amp;utm_campaign=Badge_Grade)
+
 Avant toutes choses, qu'est-ce que __TeamMatching__ ? C'est bien simple, __TeamMatching__ est un projet (qui ne sera pas porté à terme) de fin de formation, qui a pour but de nous *apprendre à travailler en équipe*   ainsi que *développer, dans une plus grande autonomie, nos compétences techniques*.
 
 ## L'idée principale du projet
@@ -13,7 +15,7 @@ Afin de développer un tel projet, il était indispensable de définir un [cahie
     
     - De connaître les besoins à satisfaire du client
     - D'organiser la charge de travail entre les membres de l'équipe
-    - De choisir les technos pouvant être utilisées
+    - De choisir les technos pouvant être utilisées.
     
 ### Les besoins du client
 
