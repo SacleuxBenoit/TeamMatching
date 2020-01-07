@@ -17,6 +17,10 @@ Afin de développer un tel projet, il était indispensable de définir un [cahie
     
 ### Les besoins du client
 
+Le client a besoin d'un site qui permet au chef de guilde de pouvoir poster une annonce pour qu'il puisse trouver des joueurs en fonction de ce qu'il recherche, le site devra donc permettre une mise en relation entre les joueurs et les chefs de guildes (postulation / message privée etc) 
+Les joueurs auront la possibilité sur la page d'accueil de choisir entre 5 jeux (League of Legends, Trackmania2, Overwatch, Albion et Guild Wars2).
+Il sera redirigé en fonction du jeu qu'il a choisi vers la page du jeu en question, une fois sur cette page, le client souhaite que le joueur puisse directement voir les offres qui ont étaient ajoutés.
+
 ### Organisation du travail d'équipe
 
 Voici les 2 membres de l'équipe : 
