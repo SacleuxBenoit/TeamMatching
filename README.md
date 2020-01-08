@@ -27,8 +27,8 @@ Il sera redirigé en fonction du jeu qu'il a choisi vers la page du jeu en quest
 
 Voici les 2 membres de l'équipe : 
 
-- [Sacleux Benoit](https://github.com/SacleuxBenoit) -> *Product Owner* et *Chef de Projet*
-- [Spysschaert Steven](https://github.com/Steven-Spysschaert) -> *Tech Lead* et *Chef de Projet*
+-   [Sacleux Benoit](https://github.com/SacleuxBenoit) -> *Product Owner* et *Chef de Projet*
+-   [Spysschaert Steven](https://github.com/Steven-Spysschaert) -> *Tech Lead* et *Chef de Projet*
 
 Et pour finir comment nous nous sommes organisé (en résumé) sur la conception de cette plateforme :
 
@@ -43,16 +43,16 @@ Nous détaillerons chaque tâche dans le README de chaque partie correspondante.
 
 ## Les Technos
 
-- [Git](https://git-scm.com) - Pour le versionning.
-- [NodeJS](https://nodejs.org/en/) -  Node.js JavaScript runtime.
-- [Express](https://expressjs.com) - Fast, unopinionated, minimalist web framework for node.
-- [Sequelize](https://sequelize.org) - An easy-to-use multi SQL dialect ORM for Node.js.
-- [Postgresql](https://www.postgresql.org) - Open source object-relational database system.
-- [Bcrypt](https://www.bcrypt.fr) - Encoding Password.
-- [JsonWebToken](https://github.com/auth0/node-jsonwebtoken) - Permet de donner une signature numérique.
-- [Mocha](https://mochajs.org) - Javascript test framework for node.js & the browser.
-- [NuxtJs](https://fr.nuxtjs.org) - framework progressif Vue.js
-- [Vuetify](https://vuetifyjs.com/en/) - Material Component Framework for Vue.
+-   [Git](https://git-scm.com) - Pour le versionning.
+-   [NodeJS](https://nodejs.org/en/) -  Node.js JavaScript runtime.
+-   [Express](https://expressjs.com) - Fast, unopinionated, minimalist web framework for node.
+-   [Sequelize](https://sequelize.org) - An easy-to-use multi SQL dialect ORM for Node.js.
+-   [Postgresql](https://www.postgresql.org) - Open source object-relational database system.
+-   [Bcrypt](https://www.bcrypt.fr) - Encoding Password.
+-   [JsonWebToken](https://github.com/auth0/node-jsonwebtoken) - Permet de donner une signature numérique.
+-   [Mocha](https://mochajs.org) - Javascript test framework for node.js & the browser.
+-   [NuxtJs](https://fr.nuxtjs.org) - framework progressif Vue.js
+-   [Vuetify](https://vuetifyjs.com/en/) - Material Component Framework for Vue.
 
 # English part :
 
@@ -81,8 +81,8 @@ The client needs a site that allows the guild leader to post an annonce so that 
 
 Here are the 2 team members : 
 
-- [Sacleux Benoit](https://github.com/SacleuxBenoit) -> *Product Owner* and *Project Manager*
-- [Spysschaert Steven](https://github.com/Steven-Spysschaert) -> *Tech Lead* and *Project Manager*
+-   [Sacleux Benoit](https://github.com/SacleuxBenoit) -> *Product Owner* and *Project Manager*
+-   [Spysschaert Steven](https://github.com/Steven-Spysschaert) -> *Tech Lead* and *Project Manager*
 
 And finally how we organize ourselves (in summary) on the design of this plateform :
 
@@ -97,16 +97,16 @@ We will detail each task in the README of each corresponding part.
 
 ## The technos
 
-- [Git](https://git-scm.com) - for versioning.
-- [NodeJS](https://nodejs.org/en/) -  Node.js JavaScript runtime.
-- [Express](https://expressjs.com) - Fast, unopinionated, minimalist web framework for node.
-- [Sequelize](https://sequelize.org) - An easy-to-use multi SQL dialect ORM for Node.js.
-- [Postgresql](https://www.postgresql.org) - Open source object-relational database system.
-- [Bcrypt](https://www.bcrypt.fr) - Encoding Password.
-- [JsonWebToken](https://github.com/auth0/node-jsonwebtoken) - Allows you to give a digital signature.
-- [Mocha](https://mochajs.org) - Javascript test framework for node.js & the browser.
-- [NuxtJs](https://fr.nuxtjs.org) - framework progressive Vue.js
-- [Vuetify](https://vuetifyjs.com/en/) - Material Component Framework for Vue.
+-   [Git](https://git-scm.com) - for versioning.
+-   [NodeJS](https://nodejs.org/en/) -  Node.js JavaScript runtime.
+-   [Express](https://expressjs.com) - Fast, unopinionated, minimalist web framework for node.
+-   [Sequelize](https://sequelize.org) - An easy-to-use multi SQL dialect ORM for Node.js.
+-   [Postgresql](https://www.postgresql.org) - Open source object-relational database system.
+-   [Bcrypt](https://www.bcrypt.fr) - Encoding Password.
+-   [JsonWebToken](https://github.com/auth0/node-jsonwebtoken) - Allows you to give a digital signature.
+-   [Mocha](https://mochajs.org) - Javascript test framework for node.js & the browser.
+-   [NuxtJs](https://fr.nuxtjs.org) - framework progressive Vue.js
+-   [Vuetify](https://vuetifyjs.com/en/) - Material Component Framework for Vue.
 
 
 
