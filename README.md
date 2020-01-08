@@ -17,13 +17,13 @@ Afin de développer un tel projet, il était indispensable de définir un [cahie
     - D'organiser la charge de travail entre les membres de l'équipe
     - De choisir les technos pouvant être utilisées.
     
-### Les besoins du client
+## Les besoins du client
 
 Le client a besoin d'un site qui permet au chef de guilde de pouvoir poster une annonce pour qu'il puisse trouver des joueurs en fonction de ce qu'il recherche, le site devra donc permettre une mise en relation entre les joueurs et les chefs de guildes (postulation / message privée etc) 
 Les joueurs auront la possibilité sur la page d'accueil de choisir entre 5 jeux (League of Legends, Trackmania2, Overwatch, Albion et Guild Wars2).
 Il sera redirigé en fonction du jeu qu'il a choisi vers la page du jeu en question, une fois sur cette page, le client souhaite que le joueur puisse directement voir les offres qui ont étaient ajoutés.
  
-### Organisation du travail d'équipe
+## Organisation du travail d'équipe
 
 Voici les 2 membres de l'équipe : 
 
@@ -41,7 +41,7 @@ Et pour finir comment nous nous sommes organisé (en résumé) sur la conception
 
 Nous détaillerons chaque tâche dans le README de chaque partie correspondante.
 
-### Les Technos
+## Les Technos
 
 - [Git](https://git-scm.com) - Pour le versionning.
 - [NodeJS](https://nodejs.org/en/) -  Node.js JavaScript runtime.
@@ -73,9 +73,9 @@ in order to develop a such project it was essential to define a [specifications]
     - Organize the worload between the members of the team
     - choose the technos that can be used
 
-### The client's needs
+## The client's needs
 
-
+The client needs a site that allows the guild leader to post an annonce so that he can find players according to what he is looking for, the site must therefore allow a connection between players and guild leaders (postulation / private message etc), The players will be abled to choose on the main page between 5 game (League of Legends, Trackmania2, Overwatch, Albion, and GuildWars2). He will be redirect depends on the game he choose, once on this page, the client want that the player can directly access to the offers who as been added.
 
 ## Organization of the teamwork
 
