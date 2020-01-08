@@ -51,7 +51,7 @@ Nous détaillerons chaque tâche dans le README de chaque partie correspondante.
 - [Bcrypt](https://www.bcrypt.fr) - Encoding Password.
 - [JsonWebToken](https://github.com/auth0/node-jsonwebtoken) - Permet de donner une signature numérique.
 - [Mocha](https://mochajs.org) - Javascript test framework for node.js & the browser.
-- [VueJs](https://vuejs.org) - Framework évolutif pour construire des interfaces utilisateur
+- [NuxtJs](https://fr.nuxtjs.org) - framework progressif Vue.js
 - [Vuetify](https://vuetifyjs.com/en/) - Material Component Framework for Vue.
 
 # English part :
@@ -74,6 +74,8 @@ in order to develop a such project it was essential to define a [specifications]
     - choose the technos that can be used
 
 ### The client's needs
+
+
 
 ## Organization of the teamwork
 
@@ -103,7 +105,7 @@ We will detail each task in the README of each corresponding part.
 - [Bcrypt](https://www.bcrypt.fr) - Encoding Password.
 - [JsonWebToken](https://github.com/auth0/node-jsonwebtoken) - Allows you to give a digital signature.
 - [Mocha](https://mochajs.org) - Javascript test framework for node.js & the browser.
-- [VueJs](https://vuejs.org) - Scalable framework for building user interfaces.
+- [NuxtJs](https://fr.nuxtjs.org) - framework progressive Vue.js
 - [Vuetify](https://vuetifyjs.com/en/) - Material Component Framework for Vue.
 
 
