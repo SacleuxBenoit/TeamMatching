@@ -191,7 +191,58 @@ module.exports = {
                 return res.status(500).json({ 'error': 'cannot update user profile' });
             }
         });
-    }
-}
+    },
 
+    /*deleteUserProfile: function (req, res) {
+
+        const headerAuth = req.headers['authorization'];
+        const userId = jwtUtils.getUserId(headerAuth);
+
+        asyncLib.waterfall([
+            function (done) {
+                models.User.findOne({
+                    where: { id: userId }
+                }).then(function (userFound) {
+                    done(null, userFound);
+                })
+                    .catch(function (err) {
+                        return res.status(500).json({ 'error': 'unable to verify user' });
+                    });
+            },
+            function (userFound, done) {
+                if (userFound) {
+                    userFound.destroy({
+                        id,
+                        email,
+                        pseudo,
+                        mdp,
+                        guilde,
+                        discordpv,
+                        discorgu,
+                        description
+
+                    }).then(function () {
+                        done(userFound);
+                    }).catch(function (err) {
+                        res.status(500).json({ 'error': 'cannot update user' });
+                    });
+                } else {
+                    res.status(404).json({ 'error': 'user not found' });
+                }
+            },
+        ], function (userFound) {
+            if (userFound) {
+                return res.status(201).json(userFound);
+            } else {
+                return res.status(500).json({ 'error': 'cannot update user profile' });
+            }
+        });
+    },
+
+    /*removeUser: function (req, res) {
+        models.User.findByPk(req.params.id).delete(function () {
+            res.redirect('/');
+        });
+    }*/
+}
 
