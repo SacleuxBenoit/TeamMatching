@@ -73,7 +73,7 @@ First of all, what is __TeamMatching__? it's very simple, __TeamMatching__ is an
 ## Summary
 
 1. [The main idea of the project](#idea)
-2. [The establishment](#establishment)
+2. [The specification](#specification)
 3. [The client's needs](#needs)
 4. [Organization of the teamwork](#Orga)
 5. [The Technos](#Technos)
@@ -84,9 +84,9 @@ First of all, what is __TeamMatching__? it's very simple, __TeamMatching__ is an
 At the very beginning of this adventure you should know that it was a question of developing a system that can connect player and guilds for a single game on a *web plateform* then a *mobile application* .
 However, this idea having been implemented in game itself, so we decided to included several games in our project and not to develop the mobile application.
 
-## The establishment <a id="establishment"></a>
+## The specification <a id="specification"></a>
 
-in order to develop a such project it was essential to define a [specifications](https://github.com/SacleuxBenoit/TeamMatching/blob/master/Informations/CahierDesCharges/CahierDesCharges.md) allowing us to do :
+in order to develop a such project it was essential to define a [specification](https://github.com/SacleuxBenoit/TeamMatching/blob/master/Informations/CahierDesCharges/CahierDesCharges.md) allowing us to do :
 
     - Know the needs to satisfy the client 
     - Organize the worload between the members of the team
