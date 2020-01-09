@@ -72,11 +72,11 @@ First of all, what is __TeamMatching__? it's very simple, __TeamMatching__ is an
 
 ## Summary
 
-1. [L'idée principale du projet](#idea)
-2. [La mise en place](#establishment)
-3. [Les besoins du client](#needs)
-4. [Organisation du travail d'équipe](#Orga)
-5. [Les Technos](#Technos)
+1. [The main idea of the project](#idea)
+2. [The establishment](#establishment)
+3. [The client's needs](#needs)
+4. [Organization of the teamwork](#Orga)
+5. [The Technos](#Technos)
 6. [French Part](#FR)
 
 ## The main idea of the project <a id="idea"></a>
