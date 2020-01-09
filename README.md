@@ -1,5 +1,7 @@
 # TeamMatching
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/6e87d3b1bf7545c18d92bc33e4cda6f0)](https://www.codacy.com/manual/benoitsacleux/TeamMatching?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=SacleuxBenoit/TeamMatching&amp;utm_campaign=Badge_Grade)
+
 Avant toutes choses, qu'est-ce que __TeamMatching__ ? C'est bien simple, __TeamMatching__ est un projet (qui ne sera pas porté à terme) de fin de formation, qui a pour but de nous *apprendre à travailler en équipe*   ainsi que *développer, dans une plus grande autonomie, nos compétences techniques*.
 
 ## L'idée principale du projet
@@ -13,16 +15,20 @@ Afin de développer un tel projet, il était indispensable de définir un [cahie
     
     - De connaître les besoins à satisfaire du client
     - D'organiser la charge de travail entre les membres de l'équipe
-    - De choisir les technos pouvant être utilisées
+    - De choisir les technos pouvant être utilisées.
     
-### Les besoins du client
+## Les besoins du client
 
-### Organisation du travail d'équipe
+Le client a besoin d'un site qui permet au chef de guilde de pouvoir poster une annonce pour qu'il puisse trouver des joueurs en fonction de ce qu'il recherche, le site devra donc permettre une mise en relation entre les joueurs et les chefs de guildes (postulation / message privée etc) 
+Les joueurs auront la possibilité sur la page d'accueil de choisir entre 5 jeux (League of Legends, Trackmania2, Overwatch, Albion et Guild Wars2).
+Il sera redirigé en fonction du jeu qu'il a choisi vers la page du jeu en question, une fois sur cette page, le client souhaite que le joueur puisse directement voir les offres qui ont étaient ajoutés.
+ 
+## Organisation du travail d'équipe
 
 Voici les 2 membres de l'équipe : 
 
-- [Sacleux Benoit](https://github.com/SacleuxBenoit) -> *Product Owner* et *Chef de Projet*
-- [Spysschaert Steven](https://github.com/Steven-Spysschaert) -> *Tech Lead* et *Chef de Projet*
+-   [Sacleux Benoit](https://github.com/SacleuxBenoit) -> *Product Owner* et *Chef de Projet*
+-   [Spysschaert Steven](https://github.com/Steven-Spysschaert) -> *Tech Lead* et *Chef de Projet*
 
 Et pour finir comment nous nous sommes organisé (en résumé) sur la conception de cette plateforme :
 
@@ -35,18 +41,18 @@ Et pour finir comment nous nous sommes organisé (en résumé) sur la conception
 
 Nous détaillerons chaque tâche dans le README de chaque partie correspondante.
 
-### Les Technos
+## Les Technos
 
-- [Git](https://git-scm.com) - Pour le versionning.
-- [NodeJS](https://nodejs.org/en/) -  Node.js JavaScript runtime.
-- [Express](https://expressjs.com) - Fast, unopinionated, minimalist web framework for node.
-- [Sequelize](https://sequelize.org) - An easy-to-use multi SQL dialect ORM for Node.js.
-- [Postgresql](https://www.postgresql.org) - Open source object-relational database system.
-- [Bcrypt](https://www.bcrypt.fr) - Encoding Password.
-- [JsonWebToken](https://github.com/auth0/node-jsonwebtoken) - Permet de donner une signature numérique.
-- [Mocha](https://mochajs.org) - Javascript test framework for node.js & the browser.
-- [VueJs](https://vuejs.org) - Framework évolutif pour construire des interfaces utilisateur
-- [Vuetify](https://vuetifyjs.com/en/) - Material Component Framework for Vue.
+-   [Git](https://git-scm.com) - Pour le versionning.
+-   [NodeJS](https://nodejs.org/en/) -  Node.js JavaScript runtime.
+-   [Express](https://expressjs.com) - Fast, unopinionated, minimalist web framework for node.
+-   [Sequelize](https://sequelize.org) - An easy-to-use multi SQL dialect ORM for Node.js.
+-   [Postgresql](https://www.postgresql.org) - Open source object-relational database system.
+-   [Bcrypt](https://www.bcrypt.fr) - Encoding Password.
+-   [JsonWebToken](https://github.com/auth0/node-jsonwebtoken) - Permet de donner une signature numérique.
+-   [Mocha](https://mochajs.org) - Javascript test framework for node.js & the browser.
+-   [NuxtJs](https://fr.nuxtjs.org) - framework progressif Vue.js
+-   [Vuetify](https://vuetifyjs.com/en/) - Material Component Framework for Vue.
 
 # English part :
 
@@ -67,14 +73,16 @@ in order to develop a such project it was essential to define a [specifications]
     - Organize the worload between the members of the team
     - choose the technos that can be used
 
-### The client's needs
+## The client's needs
+
+The client needs a site that allows the guild leader to post an annonce so that he can find players according to what he is looking for, the site must therefore allow a connection between players and guild leaders (postulation / private message etc), The players will be abled to choose on the main page between 5 game (League of Legends, Trackmania2, Overwatch, Albion, and GuildWars2). He will be redirect depends on the game he choose, once on this page, the client want that the player can directly access to the offers who as been added.
 
 ## Organization of the teamwork
 
 Here are the 2 team members : 
 
-- [Sacleux Benoit](https://github.com/SacleuxBenoit) -> *Product Owner* and *Project Manager*
-- [Spysschaert Steven](https://github.com/Steven-Spysschaert) -> *Tech Lead* and *Project Manager*
+-   [Sacleux Benoit](https://github.com/SacleuxBenoit) -> *Product Owner* and *Project Manager*
+-   [Spysschaert Steven](https://github.com/Steven-Spysschaert) -> *Tech Lead* and *Project Manager*
 
 And finally how we organize ourselves (in summary) on the design of this plateform :
 
@@ -89,16 +97,16 @@ We will detail each task in the README of each corresponding part.
 
 ## The technos
 
-- [Git](https://git-scm.com) - for versioning.
-- [NodeJS](https://nodejs.org/en/) -  Node.js JavaScript runtime.
-- [Express](https://expressjs.com) - Fast, unopinionated, minimalist web framework for node.
-- [Sequelize](https://sequelize.org) - An easy-to-use multi SQL dialect ORM for Node.js.
-- [Postgresql](https://www.postgresql.org) - Open source object-relational database system.
-- [Bcrypt](https://www.bcrypt.fr) - Encoding Password.
-- [JsonWebToken](https://github.com/auth0/node-jsonwebtoken) - Allows you to give a digital signature.
-- [Mocha](https://mochajs.org) - Javascript test framework for node.js & the browser.
-- [VueJs](https://vuejs.org) - Scalable framework for building user interfaces.
-- [Vuetify](https://vuetifyjs.com/en/) - Material Component Framework for Vue.
+-   [Git](https://git-scm.com) - for versioning.
+-   [NodeJS](https://nodejs.org/en/) -  Node.js JavaScript runtime.
+-   [Express](https://expressjs.com) - Fast, unopinionated, minimalist web framework for node.
+-   [Sequelize](https://sequelize.org) - An easy-to-use multi SQL dialect ORM for Node.js.
+-   [Postgresql](https://www.postgresql.org) - Open source object-relational database system.
+-   [Bcrypt](https://www.bcrypt.fr) - Encoding Password.
+-   [JsonWebToken](https://github.com/auth0/node-jsonwebtoken) - Allows you to give a digital signature.
+-   [Mocha](https://mochajs.org) - Javascript test framework for node.js & the browser.
+-   [NuxtJs](https://fr.nuxtjs.org) - framework progressive Vue.js
+-   [Vuetify](https://vuetifyjs.com/en/) - Material Component Framework for Vue.
 
 
 
