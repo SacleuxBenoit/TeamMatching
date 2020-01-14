@@ -2,17 +2,21 @@
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/6e87d3b1bf7545c18d92bc33e4cda6f0)](https://www.codacy.com/manual/benoitsacleux/TeamMatching?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=SacleuxBenoit/TeamMatching&amp;utm_campaign=Badge_Grade)
 
-Avant toutes choses, qu'est-ce que __TeamMatching__ ? C'est bien simple, __TeamMatching__ est un projet (qui ne sera pas porté à terme) de fin de formation, qui a pour but de nous *apprendre à travailler en équipe*   ainsi que *développer, dans une plus grande autonomie, nos compétences techniques*.
+Avant toutes choses, qu'est-ce que __TeamMatching__ ? C'est bien simple, __TeamMatching__ est un projet (qui ne sera pas porté à terme) de fin de formation, qui a pour but de nous *apprendre à travailler en équipe* ainsi que *développer, dans une plus grande autonomie, nos compétences techniques*.
 
 ## Sommaire
 
 1. [L'idée principale du projet](#idée)
-2. [La mise en place](#mise)
-3. [Les besoins du client](#besoins)
-4. [Organisation du travail d'équipe](#Orga)
-5. [Les Technos](#Technos)
-6. [English Part](#EN)
 
+2. [La mise en place](#mise)
+
+3. [Les besoins du client](#besoins)
+
+4. [Organisation du travail d'équipe](#Orga)
+
+5. [Les Technos](#Technos)
+
+6. [English Part](#EN)
 
 ## L'idée principale du projet <a id="idée"></a>
 
@@ -73,10 +77,15 @@ First of all, what is __TeamMatching__? it's very simple, __TeamMatching__ is an
 ## Summary
 
 1. [The main idea of the project](#idea)
+
 2. [The specification](#specification)
+
 3. [The client's needs](#needs)
+
 4. [Organization of the teamwork](#Orga)
+
 5. [The Technos](#Technos)
+
 6. [French Part](#FR)
 
 ## The main idea of the project <a id="idea"></a>
@@ -126,7 +135,3 @@ We will detail each task in the README of each corresponding part.
 -   [Mocha](https://mochajs.org) - Javascript test framework for node.js & the browser.
 -   [NuxtJs](https://fr.nuxtjs.org) - framework progressive Vue.js
 -   [Vuetify](https://vuetifyjs.com/en/) - Material Component Framework for Vue.
-
-
-
-
