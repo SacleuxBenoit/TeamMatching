@@ -67,6 +67,8 @@ Nous détaillerons chaque tâche dans le README de chaque partie correspondante.
 -   [Mocha](https://mochajs.org) - Javascript test framework for node.js & the browser.
 -   [NuxtJs](https://fr.nuxtjs.org) - framework progressif Vue.js
 -   [Vuetify](https://vuetifyjs.com/en/) - Material Component Framework for Vue.
+-   [axios](https://github.com/axios/axios) - Promise based HTTP client for the browser and node.js.
+
 
 # English part : <a id="EN"></a>
 
@@ -135,3 +137,4 @@ We will detail each task in the README of each corresponding part.
 -   [Mocha](https://mochajs.org) - Javascript test framework for node.js & the browser.
 -   [NuxtJs](https://fr.nuxtjs.org) - framework progressive Vue.js
 -   [Vuetify](https://vuetifyjs.com/en/) - Material Component Framework for Vue.
+-   [axios](https://github.com/axios/axios) - Promise based HTTP client for the browser and node.js.
